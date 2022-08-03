@@ -1,0 +1,10 @@
+name : Testing
+
+jobs:
+  routine :
+    name : routine
+    runs-on : ubuntu-latest
+    steps:
+      - name : routine
+        run : python routine.py
+        shell : sh
