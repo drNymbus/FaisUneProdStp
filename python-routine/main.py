@@ -21,7 +21,7 @@ if __name__ == "__main__":
                     msg += '\t' + '\t'.join(tweet["text"].split('\n')) + "\n\n"
                     msg += "DAY : " + str(tweet["day"])
 
-                    # cli.create_tweet(msg)
+                    cli.create_tweet(msg)
                     data["messages"][i]["day"] += 1
 
         if data is not None:
