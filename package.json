@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/drNymbus/FaisUneProdStp#readme",
   "dependencies": {
+    "child-process": "^1.0.2",
     "express": "^4.18.1",
     "path": "^0.12.7"
   }

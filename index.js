@@ -8,9 +8,9 @@ const {spawn} = require('child_process');
 const app = express();
 const PORT = process.env.PORT || 3000 ;
 
-const compare_time = (t1, t2) => {
-    return (t1.getHours() == t2.getHours()) && (t1.getMinutes() == t2.getMinutes()) && (t1.getSeconds() == t2.getSeconds());
-}
+// const compare_time = (t1, t2) => {
+//     return (t1.getHours() == t2.getHours()) && (t1.getMinutes() == t2.getMinutes()) && (t1.getSeconds() == t2.getSeconds());
+// }
 
 const tweet = () => {
     var data;
@@ -41,7 +41,7 @@ app.get("/", function (req, res) {
 
 app.listen(PORT, function () {
     console.log('Listening on port :' + PORT);
-
+    tweet();
     setInterval(() => { tweet(); }, (1000 * 60 * 60 * 24)); // since it's in ms, 1000ms = 1s, then 60 seconds in 1 minute, 60 minutes in 1 hour, 24 hour for a day;
     // var tweeted = false;
     // var exec_time = new Date();
