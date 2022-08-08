@@ -9,8 +9,8 @@ TOKEN_SECRET = "rK09i2LNMgoTtb1F3uNtpsJqoHSQnRDSHvdfUcKJMVNfn"
 
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAABtIfgEAAAAAkjKoftr2DudpDQnZ7kLYzfV%2F2AI%3DB3I5UVchRhuiWbRuD8oKUu4nvsO9Jw2ZLWyzmvUElS5nmNJt7f"
 
-# MESSAGE = "@CallMeSenpaiPls fais la bannière stp.\n"
-MESSAGE = "Hello\n"
+MESSAGE = "@CallMeSenpaiPls fais la bannière stp.\n"
+# MESSAGE = "Hello\n"
 
 def tweet(msg):
     cli = tweepy.Client(BEARER_TOKEN, API_KEY, API_KEY_SECRET, TOKEN, TOKEN_SECRET)

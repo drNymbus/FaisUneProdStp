@@ -42,22 +42,23 @@ app.get("/", function (req, res) {
 app.listen(PORT, function () {
     console.log('Listening on port :' + PORT);
 
-    var tweeted = false;
-    var exec_time = new Date();
-    exec_time.setHours(0,0,0);
+    setInterval(() => { tweet(); }, (1000 * 60 * 60 * 24)); // since it's in ms, 1000ms = 1s, then 60 seconds in 1 minute, 60 minutes in 1 hour, 24 hour for a day;
+    // var tweeted = false;
+    // var exec_time = new Date();
+    // exec_time.setHours(0,0,0);
 
-    while (true) {
-        var local_time = new Date();
+    // while (true) {
+    //     var local_time = new Date();
 
-        if (!tweeted && compare_time(local_time, exec_time)) {
-            console.log("tweeting ...");
+    //     if (!tweeted && compare_time(local_time, exec_time)) {
+    //         console.log("tweeting ...");
 
-            var data = tweet();
-            tweeted = true;
+    //         var data = tweet();
+    //         tweeted = true;
 
-            console.log("tweeted.");
-        }
+    //         console.log("tweeted.");
+    //     }
 
-        if (!compare_time(local_time, exec_time)) { tweeted = false; }
-    }
+    //     if (!compare_time(local_time, exec_time)) { tweeted = false; }
+    // }
 });
